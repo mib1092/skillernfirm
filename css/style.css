@@ -2,7 +2,7 @@
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
 html,body                       { width:100%; height:100%; }
-body                            { padding:0; margin:0; font:14px "Open Sans", Arial, sans-serif; background:#fff; color:#000; }
+body                            { padding:0; margin:0; font:14px "Open Sans", Arial, sans-serif; background:#fff; color:#555; }
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea {
 	padding:0;
 	margin:0;
@@ -15,8 +15,8 @@ textarea                       { vertical-align:top; }
 input[type=submit]             { cursor:pointer; }
 img, fieldset                  { border:0; }
 table                          { border-collapse:collapse; border-spacing:0; }
-a:link, a:visited              { font:14px "Open Sans", Arial, sans-serif; color:#000; text-decoration:underline; }
-a:hover                        { text-decoration:none; }
+a:link, a:visited              { font:14px "Open Sans", Arial, sans-serif; color:#00458b; text-decoration:none; }
+a:hover                        { text-decoration:underline; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------DEFAULT CLASSES------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -73,28 +73,96 @@ img {
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-.wrapper {
-    position: relative;
-    min-height: 100%;
-    margin-bottom: -225px;
-}
-.wrapper:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 225px;
-}
+
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------HEADER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
+.navbar-box {
+    padding-bottom: 10px;
+}
+
+.call-box {
+    color: #707070;
+    text-transform: uppercase;
+}
 .navbar-box .call-box {
     width: 100%;
     text-align: right;
     clear: both;
 }
+.call-box .fa {
+    color: #00458b;
+    font-size: 18px;
+}
+.navbar-box .call-box .fa {
+    position: relative;
+    top: 2px;
+}
+.call-box a {
+    color: #00458b;
+}
+.call-box a:hover {
+    text-decoration: none;
+}
+
+.logo-box {
+    float: left;
+}
+
+.main-nav {
+    overflow: hidden;
+    display: block;
+    text-align: right;
+}
+.main-nav li {
+    display: inline-table;
+    min-height: 46px;
+    margin: 0;
+    padding: 12px 25px;
+    vertical-align: middle;
+    text-align: center;
+}
+.main-nav .get-help {
+    padding: 0;
+    margin-left: 5px;
+    background: url(../img/header/get_help_bg.jpg) repeat left top;
+}
+.main-nav a {
+    text-transform: uppercase;
+    color: #707070;
+}
+.main-nav .get-help a {
+    display: inline-table;
+    min-height: 46px;
+    padding: 12px 32px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+.main-nav .current-menu-item a,
+.main-nav .current_page_item a,
+.main-nav .current-menu-parent a,
+.main-nav .current-menu-ancestor a,
+.main-nav .current-page-ancestor a,
+.single-post .main-nav .menu-item-39 a,
+.main-nav li:not(.get-help) a:hover{
+    color: #000;
+}
+.main-nav a:hover {
+    text-decoration: none;
+}
+.toggle-box .call-nav {
+    display: none;
+}
+
 .banner-box {
     background: url(../img/header/banner_section_bg.jpg) repeat top right;
     background-size: contain;
+}
+.banner-box .title {
+    color: #fff;
+    text-align: center;
+    font-size: 42px;
 }
 /*----------------------------------------------------------------------------------*/
 /*--------------------------------------NAV-----------------------------------------*/
