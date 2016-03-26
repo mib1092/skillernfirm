@@ -102,6 +102,7 @@ a:hover,
 input[type="submit"]:hover,
 button:hover {
     opacity: 0.8;
+    text-decoration: none;
 }
 .input-style::-webkit-input-placeholder { color: #4f6370; }
 .input-style::-moz-placeholder { color: #4f6370; }
@@ -120,9 +121,28 @@ img {
     margin: 0 auto;
     padding: 0 20px;
 }
+.btn,
+a.btn {
+    background: url(../img/header/get_help_bg.jpg) repeat left top;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-table;
+    min-height: 46px;
+    padding: 14px 32px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
 .top-line,
 .bot-line {
     position: relative;
+}
+.top-line {
+    padding-top: 44px;
+}
+.bot-line {
+    padding-bottom: 44px;
 }
 .top-line:before,
 .bot-line:after {
@@ -133,13 +153,15 @@ img {
     right: 20px;
     max-width: 100%;
     background: transparent;
-    border-bottom: 2px solid #00458B;
+
 }
 .top-line:before {
     top: 0;
+    border-bottom: 2px solid #00458B;
 }
 .bot-line:after {
     bottom: 0;
+    border-top: 2px solid #00458B;
 }
 .section-title {
     position: relative;
@@ -315,7 +337,7 @@ img {
 /*-------------------------------------CONTENT--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .section-difference {
-    padding: 44px 0 26px;
+    padding-bottom: 26px;
 }
 .difference-list {
     display: table;
@@ -411,6 +433,92 @@ img {
     height: 14px;
     margin-right: 10px;
     background: url(../img/content/check_pointer.png) no-repeat center transparent;
+}
+
+.section-process {
+    padding-bottom: 44px;
+}
+.process-list {
+    overflow: hidden;
+}
+.process-list li {
+    position: relative;
+    float: left;
+    width: 25%;
+}
+.process-list li:not(:first-child):before,
+.process-list li:not(:nth-child(4n+1)):before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: -54px;
+    top: 82px;
+    width: 107px;
+    height: 6px;
+    background: url(../img/content/process_dots.png) no-repeat center transparent;
+}
+.process-box {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.7;
+}
+.process-box .wrap-img {
+    display: inline-block;
+    overflow: hidden;
+    width: 170px;
+    height: 170px;
+    padding: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #D6D6D6;
+    clear: both;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: padding-box;
+    background-color: #fff;
+}
+.process-box .wrap-img img {
+    display: none;
+}
+.process-box .step-count,
+.process-box h3 {
+    display: block;
+    clear: both;
+    color: #707070;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.process-box h3 {
+    margin-bottom: 29px;
+    color: #00458b;
+}
+.process-box p {
+    margin-bottom: 34px;
+}
+
+.section-seen-on {
+
+}
+.section-seen-on .content-box {
+    padding-top: 40px;
+    border-top: 1px solid #ECECEC;
+}
+.logo-list {
+    display: table;
+    width: 100%;
+    padding: 17px 0 7px;
+}
+.logo-list li {
+    display: table-cell;
+    text-align: center;
 }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
