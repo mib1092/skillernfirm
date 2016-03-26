@@ -2,7 +2,7 @@
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
 html,body                       { width:100%; height:100%; }
-body                            { padding:0; margin:0; font:14px "Open Sans", Arial, sans-serif; background:#fff; color:#555; }
+body                            { padding:0; margin:0; font:14px 'verbcondregular', Helvetica, sans-serif; background:#fff; color:#555; }
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea {
 	padding:0;
 	margin:0;
@@ -15,7 +15,7 @@ textarea                       { vertical-align:top; }
 input[type=submit]             { cursor:pointer; }
 img, fieldset                  { border:0; }
 table                          { border-collapse:collapse; border-spacing:0; }
-a:link, a:visited              { font:14px "Open Sans", Arial, sans-serif; color:#00458b; text-decoration:none; }
+a:link, a:visited              { font:14px 'verbcondregular', Helvetica, sans-serif; color:#00458b; text-decoration:none; }
 a:hover                        { text-decoration:underline; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------DEFAULT CLASSES------------------------------*/
@@ -36,6 +36,56 @@ a:hover                        { text-decoration:underline; }
 .align-c                       { text-align:center !important; }
 .clear                         { clear:both; }
 
+/*----------------------------------------------------------------------------------*/
+/*--------------------------------------FONTS---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'verbcondregular';
+    src: url('../fonts/verbcondregular-webfont.eot');
+    src: url('../fonts/verbcondregular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/verbcondregular-webfont.woff') format('woff'),
+    url('../fonts/verbcondregular-webfont.ttf') format('truetype'),
+    url('../fonts/verbcondregular-webfont.svg#verbcondregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*@font-face {*/
+    /*font-family: 'verblight_italic';*/
+    /*src: url('../fonts/verblight-italic-webfont.eot');*/
+    /*src: url('../fonts/verblight-italic-webfont.eot?#iefix') format('embedded-opentype'),*/
+    /*url('../fonts/verblight-italic-webfont.woff') format('woff'),*/
+    /*url('../fonts/verblight-italic-webfont.ttf') format('truetype'),*/
+    /*url('../fonts/verblight-italic-webfont.svg#verblight_italic') format('svg');*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
+/*}*/
+
+@font-face {
+    font-family: 'verbcondregular_italic';
+    src: url('../fonts/verbcondregular-italic-webfont.eot');
+    src: url('../fonts/verbcondregular-italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/verbcondregular-italic-webfont.woff') format('woff'),
+    url('../fonts/verbcondregular-italic-webfont.ttf') format('truetype'),
+    url('../fonts/verbcondregular-italic-webfont.svg#verbcondregular_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*@font-face {*/
+    /*font-family: 'verblight';*/
+    /*src: url('../fonts/verblight-webfont.eot');*/
+    /*src: url('../fonts/verblight-webfont.eot?#iefix') format('embedded-opentype'),*/
+    /*url('../fonts/verblight-webfont.woff') format('woff'),*/
+    /*url('../fonts/verblight-webfont.ttf') format('truetype'),*/
+    /*url('../fonts/verblight-webfont.svg#verblight') format('svg');*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
+/*}*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------WRAPPER--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -70,18 +120,50 @@ img {
     margin: 0 auto;
     padding: 0 20px;
 }
-/*----------------------------------------------------------------------------------*/
-/*-------------------------------------WRAPPER--------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-
+.bot-line {
+    position: relative;
+    margin-bottom: 8px;
+}
+.bot-line:after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: -8px;
+    max-width: 100%;
+    height: 2px;
+    background: #00458B;
+}
+.section-title {
+    position: relative;
+    padding-bottom: 13px;
+    margin-bottom: 10px;
+    font: 600 36px/1.2 'Crimson Text';
+    color: #00458b;
+    text-align: center;
+}
+.section-title:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 132px;
+    margin-left: -66px;
+    height: 0;
+    border-bottom: 1px solid #EBEBEB;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------HEADER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .navbar-box {
     padding-bottom: 10px;
+    -webkit-box-shadow: 0 2px 10px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 2px 10px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.5);
 }
 
 .call-box {
+    padding: 5px 0 7px;
     color: #707070;
     text-transform: uppercase;
 }
@@ -89,6 +171,9 @@ img {
     width: 100%;
     text-align: right;
     clear: both;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;
 }
 .call-box .fa {
     color: #00458b;
@@ -97,9 +182,13 @@ img {
 .navbar-box .call-box .fa {
     position: relative;
     top: 2px;
+    margin-right: 2px;
 }
 .call-box a {
+    font-weight: 600;
+    font-size: 15px;
     color: #00458b;
+    margin-left: 5px;
 }
 .call-box a:hover {
     text-decoration: none;
@@ -109,32 +198,96 @@ img {
     float: left;
 }
 
+.banner-box {
+    position: relative;
+    min-height: 527px;
+    background: url(../img/header/banner_section_bg.jpg) repeat top right;
+    background-size: contain;
+    padding-top: 45px;
+}
+.banner-box .content-box {
+    min-height: 482px;
+}
+.banner-box .title {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 22px;
+    color: #fff;
+    text-align: center;
+    font: 400 48px/1.2 'Crimson Text';
+}
+.home-banner-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../img/header/home_banner_bg2.png) no-repeat bottom center transparent;
+}
+.home-banner-img img {
+    display: none;
+}
+
+/*--------------------------------------NAV-----------------------------------------*/
 .main-nav {
+    position: relative;
     overflow: hidden;
-    display: block;
     text-align: right;
+}
+.navbar-box .toggle-box {
+    text-align: right;
+}
+.navbar-box .main-nav {
+    display: inline-block;
+    padding-bottom: 1px;
+    margin-top: 5px;
+}
+.navbar-box .main-nav:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 100%;
+    height: 1px;
+    background: #EFEFEF;
 }
 .main-nav li {
     display: inline-table;
     min-height: 46px;
     margin: 0;
-    padding: 12px 25px;
+    padding: 14px 25px;
     vertical-align: middle;
     text-align: center;
 }
 .main-nav .get-help {
+    position: relative;
     padding: 0;
     margin-left: 5px;
     background: url(../img/header/get_help_bg.jpg) repeat left top;
 }
+.navbar-box .main-nav .get-help:before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding-left: 35px;
+    height: 1px;
+    background: #fff;
+}
 .main-nav a {
+    font-weight: 600;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     color: #707070;
 }
 .main-nav .get-help a {
     display: inline-table;
     min-height: 46px;
-    padding: 12px 32px;
+    padding: 14px 32px;
     color: #fff;
     text-align: center;
     vertical-align: middle;
@@ -155,23 +308,19 @@ img {
     display: none;
 }
 
-.banner-box {
-    background: url(../img/header/banner_section_bg.jpg) repeat top right;
-    background-size: contain;
-}
-.banner-box .title {
-    color: #fff;
-    text-align: center;
-    font-size: 42px;
-}
-/*----------------------------------------------------------------------------------*/
-/*--------------------------------------NAV-----------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------CONTENT--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
+.difference-list {
 
+}
+.difference-list li {
+    display: table-cell;
+    vertical-align: top;
+    width: 50%;
+    padding: 0 150px;
+    text-align: center;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
