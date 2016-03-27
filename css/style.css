@@ -536,6 +536,7 @@ a.btn {
     padding-bottom: 77px;
 }
 .client-reviews {
+    margin-top: 10px;
     padding-right: 15px;
     text-align: center;
 }
@@ -697,6 +698,74 @@ a.btn {
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
+.map {
+    position: relative;
+    height: 620px;
+}
+.map:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    pointer-events: none;
+}
+.map_canvas {
+    position: relative;
+    z-index: 1;
+}
+.gm-style-iw {
+    left: 0 !important;
+    top: 0 !important;
+    width: 465px !important;
+    height: 198px;
+}
+.map-infowindow {
+    z-index: 5;
+    padding: 0;
+}
+.map-img {
+    float: right;
+    min-height: 198px;
+    max-width: 200px;
+    width: auto;
+    height: auto;
+}
+.section-appointment {
+    overflow: hidden;
+    height: 113px;
+    background: #00458B;
+    color: #fff;
+}
+.appointment-p {
+    float: left;
+    width: 50%;
+    padding-right: 95px;
+    height: 100%;
+}
+.appointment-p p {
+    position: relative;
+    background: #252525;
+    color: #fff;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    min-height: 100%;
+}
+.appointment-list {
+    float: left;
+    width: 50%;
+}
+.appointment-list li {
+    float: left;
+}
+
 #footer .nav-section {
     overflow: hidden;
     clear: both;
