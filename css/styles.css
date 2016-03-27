@@ -532,11 +532,11 @@ a.btn {
 }
 .section-contact .content-box {
     overflow: hidden;
-    padding-top: 80px;
+    padding-top: 75px;
     padding-bottom: 77px;
 }
 .client-reviews {
-    margin-top: 10px;
+    margin-top: 15px;
     padding-right: 15px;
     text-align: center;
 }
@@ -629,7 +629,7 @@ a.btn {
 
 .section-form {
     overflow: hidden;
-    margin-left: 15px;
+    padding: 5px 5px 0 15px;
 }
 .wrap-form {
     position: relative;
@@ -661,6 +661,15 @@ a.btn {
     color: #303030;
     clear: both;
 }
+.wpcf7-not-valid {
+    border-color: #f00;
+}
+.wrap-form .wpcf7-not-valid-tip{
+    display: none;
+}
+.wrap-form .wpcf7-response-output {
+    margin: 20px 0 0;
+}
 .wrap-form form .optional {
     float: right;
     position: relative;
@@ -670,8 +679,8 @@ a.btn {
 }
 .wrap-form form .mcafee {
     position: absolute;
-    right: 30px;
-    bottom: 47px;
+    right: 0;
+    bottom: 7px;
 }
 .wrap-form form input[type=submit] {
     margin-top: 26px;
@@ -882,6 +891,9 @@ a.btn {
 #footer .main-nav li {
     min-height: auto;
     padding: 5px 13px;
+}
+#footer .main-nav .get-help {
+    display: none;
 }
 #footer .main-nav li:first-child {
     padding-left: 5px;
