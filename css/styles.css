@@ -702,19 +702,6 @@ a.btn {
     position: relative;
     height: 620px;
 }
-.map:after {
-    content: '';
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.6);
-    pointer-events: none;
-}
 .map_canvas {
     position: relative;
     z-index: 1;
@@ -738,7 +725,7 @@ a.btn {
 }
 .section-appointment {
     overflow: hidden;
-    height: 113px;
+    height: 114px;
     background: #00458B;
     color: #fff;
 }
@@ -751,6 +738,7 @@ a.btn {
 .appointment-p p {
     position: relative;
     background: #252525;
+    padding: 46px 0;
     color: #fff;
     text-align: right;
     text-transform: uppercase;
@@ -758,12 +746,75 @@ a.btn {
     font-size: 18px;
     min-height: 100%;
 }
+.appointment-p p:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -70px;
+    width: 70px;
+    height: 114px;
+    background: url(../img/footer/appointment_shadow.png) no-repeat right center transparent;
+}
+.appointment-p p:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: -40px;
+    width: 0;
+    height: 0;
+    border-top: 57px solid transparent;
+    border-left: 40px solid #252525;
+    border-bottom: 57px solid transparent;
+}
 .appointment-list {
     float: left;
     width: 50%;
+    padding: 20px 0;
+    margin-left: -18px;
 }
 .appointment-list li {
     float: left;
+    border-left: 1px solid #145494;
+    padding: 12px 0 12px 35px;
+    margin-left: 24px;
+}
+.appointment-list li:first-child {
+    border: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.appointment-list .fa {
+    float: left;
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 48px;
+    background: #252525;
+    border-radius: 50%;
+    color: #fff;
+}
+.appointment-list .fa-phone {
+    font-size: 28px;
+    line-height: 51px;
+}
+.appointment-list p {
+    overflow: hidden;
+    margin-top: 4px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #c2c2c2;
+    font-weight: 600;
+}
+.appointment-list a {
+    display: block;
+    font-size: 19px;
+    color: #fff;
+    font-weight: 600;
 }
 
 #footer .nav-section {
@@ -870,7 +921,7 @@ a.btn {
 .copy li:not(:first-child):before {
     content: '•';
     position: absolute;
-    left: -24px;
+    left: -25px;
     top: 4px;
     font: 400 12px/1 Helvetica;
     color: #858a9a;
