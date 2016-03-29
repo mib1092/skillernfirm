@@ -1183,7 +1183,8 @@ a.wpp-post-title:hover {
     font: normal normal normal 18px/1 FontAwesome;
     position: absolute;
     right: 35px;
-    top: 10px;
+    top: 50%;
+    margin-top: -5px;
     color: #00458b;
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
