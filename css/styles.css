@@ -345,6 +345,7 @@ a.btn {
 .main-nav .current-menu-ancestor a,
 .main-nav .current-page-ancestor a,
 .single-post .main-nav .menu-item-20 a,
+.archive .main-nav .menu-item-20 a,
 .main-nav li:not(.get-help) a:hover {
     color: #000;
 }
@@ -753,6 +754,9 @@ a.btn {
     border-bottom: 1px solid #EDECEC;
     font: 400 15px/1.7 'verbcondregular', Helvetica, sans-serif;
     color: #303030;
+}
+.page .post-content {
+    border-bottom: none;
 }
 .post-content img {
     max-width: 100%;
@@ -1411,6 +1415,7 @@ a.wpp-post-title:hover {
 #footer .main-nav .current-menu-ancestor a,
 #footer .main-nav .current-page-ancestor a,
 .single-post #footer .main-nav .menu-item-20 a,
+.archive #footer .main-nav .menu-item-20 a,
 #footer .main-nav li a:hover {
     color: #000;
 }
@@ -1456,4 +1461,20 @@ a.wpp-post-title:hover {
     position: relative;
     top: 12px;
     margin-left: 8px;
+}
+
+/*--------------------------------------OTHER---------------------------------------*/
+.wrap-404 {
+    text-align: center;
+    padding: 90px 0 100px;
+    color: #00458b;
+    font-size: 56px;
+    letter-spacing: 0;
+}
+.wrap-404 .error-404{
+    display: block;
+    margin-bottom: -15px;
+    font-weight: 700;
+    font-size: 180px;
+    line-height: 1;
 }
