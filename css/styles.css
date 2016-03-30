@@ -810,14 +810,37 @@ a.btn {
 }
 .post-content ul,
 .post-content ol {
-    padding-left: 2em;
-    margin-bottom: 8px;
+    padding-left: 30px;
+    margin-bottom: 12px;
+}
+.post-content ol {
+    counter-reset: my-badass-counter;
 }
 .post-content ul li {
+    margin-bottom: 8px;
     list-style-type: disc;
 }
 .post-content ol li {
-    list-style-type: decimal;
+    position: relative;
+    margin-bottom: 8px;
+    list-style-type: none;
+}
+.post-content ol li:before {
+    content: counter(my-badass-counter);
+    counter-increment: my-badass-counter;
+    position: absolute;
+    left: -31px;
+    top: 50%;
+    margin-top: -12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #00458B;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #fff;
 }
 .post-content table {
     width: 100%;
@@ -1047,6 +1070,154 @@ a.post-read-more:hover {
     padding-left: 2px;
 }
 
+/*------------------------------------ATTORNEY--------------------------------------*/
+.single-attorney .preheader-box {
+    background-image: url(../img/header/banner_section_bg.jpg);
+}
+.banner-attorney {
+    min-height: 455px;
+    padding-top: 63px;
+    padding-bottom: 20px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: right bottom;
+    color: #fff;
+}
+.banner-attorney .title {
+    max-width: 600px;
+    margin-bottom: 13px;
+    font-size: 44px;
+}
+.banner-attorney-content {
+    max-width: 500px;
+    padding-bottom: 39px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #d7d7d7;
+}
+.banner-attorney-content p {
+    margin-bottom: 12px;
+}
+.banner-attorney-footer {
+    position: relative;
+    max-width: 600px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.45;
+}
+.banner-attorney-footer:before {
+    content: '';
+    display: block;
+    width: 51px;
+    height: 2px;
+    background: #636363;
+    margin-bottom: 29px;
+}
+
+.single-attorney .inner-wrap {
+    padding-top: 47px;
+    padding-bottom: 33px;
+}
+.single-attorney .content {
+    padding-top: 19px;
+}
+.single-attorney .post-content {
+    border-bottom: none;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    padding-bottom: 0;
+}
+.single-attorney .post-content h2,
+.single-attorney .post-content h3 {
+    font-size: 18px;
+    margin-bottom: 9px;
+}
+.single-attorney .post-header {
+    margin-bottom: 23px;
+}
+.attorney-title {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #00458b;
+    letter-spacing: 1px;
+    padding-bottom: 22px;
+}
+.attorney-title:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 132px;
+    height: 1px;
+    background: #EBEBEB;
+}
+.attorney-btn {
+    font-size: 14px;
+    margin-top: 16px;
+    padding: 15px 16px 14px;
+}
+a.attorney-btn:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.section-lawyers {
+    padding-bottom: 10px;
+}
+.lawyers-slider {
+    padding-top: 30px;
+}
+.lawyers-slider .slick-slide {
+    padding: 0 15px 47px;
+    text-align: center;
+}
+.lawyers-slider .wrap-img {
+    display: inline-block;
+    overflow: hidden;
+    width: 170px;
+    height: 170px;
+    padding: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #D6D6D6;
+    clear: both;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: padding-box;
+    background-color: #fff;
+}
+.lawyers-slider h3 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #0054a6;
+}
+.lawyers-slider h3:after {
+    content: '';
+    position: absolute;
+    width: 132px;
+    height: 1px;
+    background: #EBEBEB;
+    bottom: 0;
+    left: 50%;
+    margin-left: -66px;
+}
+.lawyer-excerpt {
+    padding: 0 10px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+.lawyer-excerpt p {
+    margin-bottom: 8px;
+}
+
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -1184,7 +1355,7 @@ a.wpp-post-title:hover {
     position: absolute;
     right: 35px;
     top: 50%;
-    margin-top: -5px;
+    margin-top: -9px;
     color: #00458b;
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
